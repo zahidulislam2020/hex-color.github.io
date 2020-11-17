@@ -14,16 +14,16 @@ button.addEventListener('click', () => {
 
 	body.style.background = `#${randHexColorCode}`;
  	displayCodeField.innerHTML = `Hex Color Code: #${randHexColorCode}`;
-  
+
 })
 
 let randomValue = () => {
-	let randomValue1 = Math.floor(Math.random() * hexNumAndAlph.length);
-	let randomValue2 = Math.floor(Math.random() * hexNumAndAlph.length);
-	let randomValue3 = Math.floor(Math.random() * hexNumAndAlph.length);
-	let randomValue4 = Math.floor(Math.random() * hexNumAndAlph.length);
-	let randomValue5 = Math.floor(Math.random() * hexNumAndAlph.length);
-	let randomValue6 = Math.floor(Math.random() * hexNumAndAlph.length);
-  
-	return [hexNumAndAlph[randomValue1], hexNumAndAlph[randomValue2], hexNumAndAlph[randomValue3], hexNumAndAlph[randomValue4], hexNumAndAlph[randomValue5], hexNumAndAlph[randomValue6]];
+	
+let newArray = []
+	
+  for(let i = 1; i <= 6; i++) {
+  	var indexOfArray = Math.floor(Math.random() * hexNumAndAlph.length);
+    newArray.push(hexNumAndAlph[indexOfArray])
+  }
+  return newArray;
 }
