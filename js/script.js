@@ -4,11 +4,9 @@ let button = document.querySelector('.button');
 let autoBtn = document.querySelector('.manual-auto');
 let currentDelayTime = document.querySelector('.current-delay-time');
 let timeInput = document.querySelector('.delay-time');
-
+let blinking = document.querySelector('.a');
 let stopId;
 let blinkStop;
-
-
 
 let timeSet = () => captureInputValue();
 
@@ -30,7 +28,6 @@ function captureInputValue() {
 		}
 	}
 }
-
 
 let hexNumAndAlph = [0, 1, 2, 3, 4, 5, 6, 6, 8, 9, 'a', 'b', 'c', 'd', 'e', 'f'];
 
@@ -85,15 +82,13 @@ function actionToggle() {
 		timeInput.setAttribute('disabled', '');
 		currentDelayTime.setAttribute('disabled', '');
 		button.removeAttribute('disabled', '');
+		blinking.classList.remove('blink');
 		clearTimeout(blinkStop);
 		clearTimeout(stopId);
 		isAuto = false;
 	}
 }
 
-
-let blinking = document.querySelector('.a');
-	
-	function blink() {
-		blinking.classList.toggle('blink')
-	}
+function blink() {
+	blinking.classList.toggle('blink')
+}
