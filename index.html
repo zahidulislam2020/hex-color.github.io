@@ -9,12 +9,22 @@
   <body>
 	
 	<div class="demo">
-		<div class="note">Click the button to change background color randomly</div>
+		<div class="note">Randomly change background color automatically or manually</div>
 		<div class="code-display">Hex Color Code: #7791a8</div>
-		<button class="button" type="button">Click </button>
+		<div class="delay-time-container">
+			<label for="delay">Set Delay Time</label>
+			<label for="delay">Current Delay Time</label>
+		</div>
+		<div class="delay-time-container">
+			<input type="number" class="delay-time" value="5" min="1" max="60" disabled>
+			<button class="current-delay-time" type="button" disabled><p class="a">5</p></button>
+		</div>
+		<div class="wrapper">
+			<button class="button" type="button">Click</button>
+			<button class="manual-auto" type="button">Set to Auto</button>
+		</div>
 	</div>
 
-	
 	<script src="./js/script.js"></script>
 	
   </body>
