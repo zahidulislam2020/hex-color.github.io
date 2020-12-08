@@ -30,20 +30,55 @@ body {
 }
 
 .button{
-  width: 120px;
+  width: 100px;
   height: 40px;
-  line-height: 40px;
-  text-align: center;
-  margin-top: 20px;
   font-size: 18px;
 }
 
 .code-display{
-  width: 200px;
+  width: 225px;
   height: 40px;
   line-height: 40px;
   text-align: center;
   background: #ccc;
   font-size: 18px;
   border: 1px solid;
+}
+
+.delay-time-container {
+	display: flex;
+	width: 225px;
+	justify-content: space-between;
+	align-items: center;
+}
+
+label {
+	font-size: 18px;
+	font-weight: 400;
+	margin-right: 10px;
+}
+
+input {
+	width: 80px;
+	height: 30px;
+	font-size: 18px;
+	text-align: center;
+}
+
+.current-delay-time {
+	width: 80px;
+	height: 30px;
+	font-size: 18px;
+	text-align: center;
+}
+
+.manual-auto {
+	width: 125px;
+	height: 40px;
+	font-size: 18px;
+	
+}
+
+.blink {
+	visibility: hidden;
 }
